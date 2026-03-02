@@ -19,10 +19,6 @@ mainContainer.replaceChildren(
 
 const mainGrid = $("main");
 
-window.addEventListener("resize", (e) => {
-  mainGrid.style.gridTemplateColumns = `repeat(${mainGrid.getClientRects()[0].width / 500}, auto)`;
-});
-
 mainGrid.addEventListener("click", (e) => {
   window.open(e.target.closest(".entry").dataset.source);
 });
